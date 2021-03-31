@@ -13,22 +13,52 @@ int main ()
     float pole_prostokata;
     float pole_trojkata;
 
-    printf ("Podaj dlugosc boku a - ");
-    scanf ("%f", &a);
-    printf ("Podaj dlugosc boku b - ");
-    scanf ("%f", &b);
-    printf ("Podaj wysokosc h - ");
-    scanf ("%f", &h);
 
+
+
+    do
+    {
+    printf ("Nacisnij 1 jesli chcesz obliczyc prostokat \nNacisnij 2 jesli chcesz obliczyc trojkat \nInna liczba = brak opcji\n");
+
+
+    fflush(stdin);
+
+    scanf ("%d", &liczba);
+
+    switch(liczba)
+{
+
+
+case 1:
+    printf ("\nPodaj dlugosc boku a\n");
+    scanf ("%f", &a);
+    printf ("\nPodaj dlugosc boku b\n");
+    scanf ("%f", &b);
 
     pole_prostokata = ((a*b));
-    pole_trojkata = ((a*h))/2;
 
-    printf("Pole prostokata wynosi:%.2f", pole_prostokata);
-    printf("Pole trojkata wynosi:%.2f", pole_trojkata);
+    printf("\nPole prostokata wynosi:%.2f\n\n", pole_prostokata);
+break;
+
+case 2:
+
+    printf ("\nPodaj dlugosc boku a\n");
+    scanf ("%f", &a);
+    printf ("\nPodaj dlugosc boku h\n");
+    scanf ("%f", &h);
+    pole_trojkata = (a * h)/2;
+    printf("\nPole trojkata wynosi:%.2f\n\n", pole_trojkata);
 
 
-     return 0;
+
+}
+
+    }while(liczba > 0);
+
+
+
+
+    return 0;
 
 
 
